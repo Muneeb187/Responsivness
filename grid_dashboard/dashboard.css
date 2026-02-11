@@ -1,0 +1,183 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(10px, 3vw, 20px);
+    margin: clamp(20px, 5vw, 50px) clamp(20px, 8vw, 120px);
+    
+    
+}
+
+.card {
+    /* allow height to be determined by padding/content so icons fit */
+    text-align: center;
+    border-radius: 15px;
+    background-color: green;
+    color: wheat;
+    padding: clamp(15px, 3vw, 20px) clamp(30px, 5vw, 48px);
+    /* responsive padding */
+    font-size: clamp(14px, 2.5vw, 18px);
+    /* responsive font size */
+    position: relative;
+    /* for absolutely positioned icons */
+    min-width: 0;
+    /* ensure content doesn't overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.card h2 {
+    color: rgba(255, 0, 0, 0.785);
+}
+
+.card span{
+    color: rgba(0, 0, 128, 0.836);
+}
+
+/* Icon helpers (decorative) */
+.card .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(1em, 4vw, 1.4em);
+    height: clamp(1em, 4vw, 1.4em);
+    color: wheat;
+    /* ties to card color */
+    display: inline-block;
+}
+
+.card .icon.start {
+    left: clamp(8px, 2vw, 14px);
+}
+
+.card .icon.end {
+    right: clamp(8px, 2vw, 14px);
+}
+
+.card .icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Trend arrow (up/down) */
+.card .trend {
+    position: absolute;
+    top: clamp(8px, 2vw, 40px);
+    right: clamp(8px, 2vw, 14px);
+    width: clamp(0.9em, 3vw, 1.05em);
+    height: clamp(0.9em, 3vw, 1.05em);
+    display: inline-block;
+}
+
+.card .trend svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.card .trend.up {
+    color: #7CFC6F;
+}
+
+/* light green */
+.card .trend.down {
+    color: #ff7b7b;
+    left: 210px;
+    top: 05px;
+}
+
+
+/* .card p */
+.card:nth-child(odd) {
+    background: linear-gradient(to right, rgba(28, 0, 128, 0.808), rgba(128, 0, 128, 0.534));
+}
+
+.down {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(10px, 3vw, 20px);
+    margin: clamp(20px, 5vw, 30px) clamp(20px, 8vw, 120px);
+}
+
+.cards{
+
+    border-radius: 15px;
+    background-color: white;
+    /* border: 2px solid black; */
+    text-align: center;
+    padding: clamp(8px, 2vw, 10px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+.cards img{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  
+}
+
+.cards h1{
+  color: rgba(0, 0, 255, 0.589);
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+ .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 10px 20px ;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px 0;
+
+}
+
+/* Mobile responsiveness: move sidebar (down section) below content and make single column */
+/* @media screen and (max-width: 768px) {
+    .container {
+        margin: clamp(15px, 4vw, 30px) clamp(15px, 4vw, 60px);
+    }
+
+    .down {
+        // Keep existing grid-template-columns for auto-fit behavior 
+        margin: clamp(15px, 4vw, 30px) clamp(15px, 4vw, 60px);
+    }
+} */
+
+@media screen and (max-width: 600px) {
+    /* .down {
+        // Force single column on mobile so sidebar goes below content 
+        grid-template-columns: 1fr;
+    } */
+
+    .row {
+        /* Keep row as flex (horizontal) so circle+text stay together */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: clamp(8px, 2vw, 12px);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .circle {
+        margin: clamp(8px, 1vw, 10px) clamp(8px, 1vw, 15px);
+    }
+}

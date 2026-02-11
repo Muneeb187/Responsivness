@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    height: 100%;
+    width: 100%;
+}
+
+/* Default = Mobile */
+.layout {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.sidebar {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    background: #f4f4f4;
+    padding: 20px;
+    min-height: 200px;
+}
+
+/* PC Layout */
+
+/* if i use it it apply medi query bcz size of (pc > laptop) */
+
+/* @media (max-width: 1440px) {
+    .layout {
+        flex-direction: row;    
+    }
+} */
+
+/* Laptop Layout */
+
+/* i have not applied bcz of laptop size (1024px < laptop < 1440px) and i have applied for mobile layout (max-width: 768px) so it apply for laptop also but i want to apply for mobile only so i have commented it out */ 
+
+/* @media (max-width: 1024px) {
+    .layout {
+        flex-direction: row;    
+    }
+} */
+
+/* laptop and mobile  Layout */
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: row;    
+        gap: 20px;
+    }
+}

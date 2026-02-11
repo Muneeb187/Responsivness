@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  margin: 50px auto;
+  /* font-size: clamp(14px, 2vw, 18px); */
+  overflow: hidden;
+}
+
+.cards {
+  padding: 20px;
+  background-color: green;
+  color: wheat;
+}
+
+.cards h1{
+  color: yellowgreen;
+}
+
+.head {
+
+  position: sticky;
+  height: 100px;
+  width: clamp(150px, 100%, 1200px);
+  background-color: red;
+  color: wheat;
+  margin: 50px 20px;
+  padding: 20px 0px;
+  text-align: center;
+  font-size: larger;
+
+
+}

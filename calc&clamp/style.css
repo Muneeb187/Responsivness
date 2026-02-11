@@ -1,0 +1,67 @@
+/* .container {
+  width: min(90%, 1200px);
+  margin: auto;
+  background-color: green;
+  color: white;
+}
+
+h1 {
+  font-size: clamp(40px, 3vw, 12px);
+} */
+
+body {
+
+  height: 100%;
+  width: 100%;
+
+}
+
+* {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.head {
+
+  position: sticky;
+  height: 100px;
+  width: clamp(150px, 100%, 1200px);
+  background-color: red;
+  margin: 50px 20px;
+  padding: 20px 0px;
+  text-align: center;
+  font-size: larger;
+
+
+}
+
+h1 {
+
+  color: wheat;
+
+}
+
+.container {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  margin: 50px auto;
+  width: clamp(320px, 90%, 1200px);
+  /* max-width: 1200px; */
+  padding: 0 20px;
+
+}
+
+
+
+.cards {
+
+  background: linear-gradient(to right top, rgba(0, 128, 0, 0.774), rgba(0, 0, 255, 0.895));
+  padding: clamp(20px, 4vw, 50px);
+  text-align: center;
+  font-size: clamp(14px, 2.5vw, 18px);
+
+}
