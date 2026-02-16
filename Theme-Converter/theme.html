@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        min-height: 100vh;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        
+        text-align: center;
+    width: 300px;
+    height: 260px;
+    padding: 20px;
+    border-radius: 17px;
+    background-color: whitesmoke;
+    box-shadow: 2px 0px 35px 0px black;
+    transition: background-color 0.3s ease,color .3s ease ;
+    }
+
+    .card:has(input:checked){
+        background-color: black;
+        color: white;
+    }
+  </style>
+  <body>
+    <div class="card">
+        <h1>Card</h1>
+        <br>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum hic,
+        mollitia minima quibusdam qui laboriosam necessitatibus consequatur
+        voluptate. Temporibus, quod?
+      </p>
+      <br>
+      <input type="checkbox" name="" id="">
+    </div>
+  </body>
+</html>

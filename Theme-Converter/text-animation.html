@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: grey;
+
+    }
+
+    .text {
+      width: 20em;
+      background-color: red;
+    }
+
+    span {
+      font-size: 23px;
+    }
+
+    span::after {
+      content: "Full Stack Web Developer";
+      color: yellow;
+      padding-left: 8px;
+      animation: text 10s infinite;
+    }
+
+    @keyframes text {
+      0% {
+        content: "Front End  Developer";
+      }
+      20% {
+        content: "Back End  Developer";
+      }
+      40% {
+        content: "NextJS Developer";
+      }
+      60% {
+        content: "ReactJS Developer";
+      }
+      80% {
+        content: "Node & Express Developer";
+      }
+      100% {
+        content: "Full Stack Web Developer";
+      }
+    }
+  </style>
+  <body>
+    <div class="TEXT">
+      <span> i am a </span>
+    </div>
+    
+    <br>
+
+  </body>
+</html>
